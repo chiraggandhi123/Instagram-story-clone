@@ -4,5 +4,5 @@ import { IConfig, IPayload } from "@app/reducers/types.interface"
 
 export const toggleModal = (dispatch: React.Dispatch<IPayload>, config?: IConfig) => {
   toggleOverflowHidden("body")
-  if(dispatch) dispatch({ type: REDUCER_TYPES.toggleModal, config })
+  if (dispatch) dispatch({ type: REDUCER_TYPES.toggleModal, config })
 }
