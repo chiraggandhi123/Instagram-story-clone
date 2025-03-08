@@ -1,3 +1,6 @@
+import { Header } from "@app/components/Header"
+import { Stories } from "@app/containers/Stories"
+import { ContentMedia } from "@app/containers/ContentMedia"
 import { AppContext } from "@app/contexts"
 import { getInitialState } from "@app/services/getInitialState"
 import { useEffect, useReducer } from "react"
@@ -9,15 +12,17 @@ function App() {
     ...state,
     dispatch
   }
-
+  
   return (
     <AppContext.Provider value={globalState}>
       <div className="App h-auto min-h-screen w-full bg-black">
         <section className="w-full max-w-[900px] mx-auto h-full">
-          
+          {/* <Header /> */}
+          <Stories />
+          <ContentMedia />
         </section>
 
-        
+
       </div>
     </AppContext.Provider>
   )
