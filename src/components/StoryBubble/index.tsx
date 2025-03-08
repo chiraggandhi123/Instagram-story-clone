@@ -1,5 +1,4 @@
 import { AppContext } from "@app/contexts"
-import { IAppContext } from "@app/contexts/types.interface"
 import { useContext } from "react"
 import { toggleModal } from "@app/services/toggleModal"
 
@@ -20,7 +19,7 @@ const StoryBubble: React.FC<StoryBubbleProps> = ({
   height = "h-16",
   isPost = false
 }): JSX.Element => {
-  const { dispatch } = useContext(AppContext) as IAppContext
+  const { dispatch } = useContext(AppContext) 
   const handleClick = () => dispatch && toggleModal(dispatch, {
     userName,
     userId

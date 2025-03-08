@@ -2,14 +2,13 @@ import React, { useContext, useEffect } from "react"
 
 import { StoryImg } from "@app/components/StoryImg"
 import { StoriesContext } from "@app/contexts/StoriesContext"
-import { IStoriesContext } from "@app/types/interfaces/storiesContext.interface"
 
 interface StoriesHoverProps {
   children: JSX.Element
 }
 
 const StoriesHover: React.FC<StoriesHoverProps> = ({ children }): JSX.Element => {
-  const { currentStories, currentStory, loading } = useContext(StoriesContext) as IStoriesContext
+  const { currentStories, currentStory, loading } = useContext(StoriesContext) 
 
   useEffect(() => {
     const spanElement = document.getElementById(currentStory)
