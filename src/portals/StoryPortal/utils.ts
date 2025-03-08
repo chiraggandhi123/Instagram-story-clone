@@ -6,13 +6,14 @@ import { toggleModal } from "@app/services/toggleModal"
 import React from "react"
 
 export const handleClick = (dispatch: React.Dispatch<null>) => () => {
+  //@ts-ignore
   clearTimeout(Timer.id)
   dispatch && toggleModal(dispatch)
 }
 
 export const handlePause = (storyTransitionConfig: startStoryTransitionProps) => () => {
   const { storiesDispatch, timing, inPause, setInPause } = storyTransitionConfig
-
+  //@ts-ignore
   if (!inPause) clearTimeout(Timer.id)
   if (inPause) Timer.id = setTimeout(startStoryTransition(storyTransitionConfig), timing)
 

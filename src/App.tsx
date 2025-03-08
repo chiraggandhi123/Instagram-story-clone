@@ -8,6 +8,7 @@ import { Portal } from "@app/portals"
 import { StoryPortal } from "@app/portals/StoryPortal"
 
 function App() {
+  //@ts-ignore
   const [state, dispatch] = useReducer(reducerFn, getInitialState())
   const globalState = {
     ...state,

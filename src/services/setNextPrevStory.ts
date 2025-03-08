@@ -57,7 +57,7 @@ export const setNextPrevStory = (config: INextPrevStory) => {
             }
           })
         }
-
+        //@ts-ignore
         clearTimeout(Timer.id)
       }
 
@@ -101,7 +101,7 @@ export const setNextPrevStory = (config: INextPrevStory) => {
             }
           })
         }
-
+        //@ts-ignore
         clearTimeout(Timer.id)
       }
 
