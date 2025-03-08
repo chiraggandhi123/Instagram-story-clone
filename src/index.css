@@ -1,68 +1,59 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+  position: relative;
+  color: white;
+  width: 100%;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+.portal{
+  position: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.gradient {
+  background: linear-gradient(to right top,#ffc600 20%,#ff0040,#e600cc 80%);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.left-dir-gradient:active {
+  background: linear-gradient(90deg, rgba(0,0,0,0.5), transparent);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.right-dir-gradient:active {
+  background: linear-gradient(-90deg, rgba(0,0,0,0.5), transparent);
+}
+
+.toHidden{
+  overflow-y: hidden;
+}
+
+.story-hover{
+  @apply block w-full h-[2px] rounded-full bg-[rgba(255,255,255,0.25)];
+}
+
+.story-hover-transition{
+  animation: storyHoverTransition 5s linear;
+  background-color: white;
+}
+
+.animation-pause{
+  animation-play-state: paused;
+}
+
+.transition-finished{
+  background-color: white;
+}
+
+@keyframes storyHoverTransition {
+  0%{
+    width: 0px;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+  100%{
+    width: 100%;
   }
 }
