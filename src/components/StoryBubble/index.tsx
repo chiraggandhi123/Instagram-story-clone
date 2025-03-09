@@ -19,6 +19,7 @@ const StoryBubble: React.FC<StoryBubbleProps> = ({
   height = "h-16",
   isPost = false
 }): JSX.Element => {
+  //@ts-ignore
   const { dispatch } = useContext(AppContext) 
   const handleClick = () => dispatch && toggleModal(dispatch, {
     userName,

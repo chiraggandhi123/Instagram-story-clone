@@ -8,6 +8,7 @@ import React from "react"
 export const handleClick = (dispatch: React.Dispatch<null>) => () => {
   //@ts-ignore
   clearTimeout(Timer.id)
+  //@ts-ignore
   dispatch && toggleModal(dispatch)
 }
 

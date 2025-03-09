@@ -8,6 +8,7 @@ interface PortalProps {
 
 const Portal: React.FC<PortalProps> = ({ children }) => {
   const portalContainer = document.getElementById("portal") as HTMLDivElement
+  //@ts-ignore
   const { modal } = useContext(AppContext) 
 
   if(modal.status) return ReactDOM.createPortal(children, portalContainer)
